@@ -1,13 +1,23 @@
 package cn.chiv.entity;
 
+import static javax.persistence.FetchType.LAZY;
+
 import java.util.Date;
 
+import javax.persistence.Basic;
 import javax.persistence.Entity;
+import javax.persistence.Lob;
+import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 import org.springframework.data.jpa.domain.AbstractPersistable;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 /**
- * Entity implementation class for Entity: NewsS 侨联新闻
+ * Entity implementation class for Entity: NewsS 
+ * 侨联新闻模块
  */
 @Entity
 public class NewsS extends AbstractPersistable<Long> {
@@ -19,29 +29,49 @@ public class NewsS extends AbstractPersistable<Long> {
 
 	/** 关键字 */
 	private String KeyWord;
+	
 	/** 发布时间 */
+	@Temporal(TemporalType.DATE)
 	private Date times;
-	/** 发布人 */
-	private Integer pubMan;
+	
 	/** 内容 */
+	@Lob
 	private String content;
+	
 	/** 图片路径 */
-	private String Img;
+	@Lob
+	@Basic(fetch = LAZY)
+	@JsonIgnore
+	private byte[] Img;
+	
 	/** 作者 */
 	private String author;
+	
 	/** 分类 */
 	private String classes;
+	
 	/** 信息等级 */
 	private String infoLevel;
+	
 	/** 点击数 */
-	private Integer clickNum;
-	/** 会员账号 */
-	private String acounts;
+	private int clickNum;
+	
 	/** 来源 */
 	private String resource;
+	
 	/** 状态 */
 	private Integer status;
 
+	/** 用户信息 */
+	@ManyToOne(fetch = LAZY)
+	private User user;
+	
+	/** 备选字段 */
+	private String Optional1;
+	private String Optional2;
+	private String Optional3;
+
+	
 	public String getTitle() {
 		return Title;
 	}
@@ -66,13 +96,6 @@ public class NewsS extends AbstractPersistable<Long> {
 		this.times = times;
 	}
 
-	public Integer getPubMan() {
-		return pubMan;
-	}
-
-	public void setPubMan(Integer pubMan) {
-		this.pubMan = pubMan;
-	}
 
 	public String getContent() {
 		return content;
@@ -81,12 +104,13 @@ public class NewsS extends AbstractPersistable<Long> {
 	public void setContent(String content) {
 		this.content = content;
 	}
+ 
 
-	public String getImg() {
+	public byte[] getImg() {
 		return Img;
 	}
 
-	public void setImg(String img) {
+	public void setImg(byte[] img) {
 		Img = img;
 	}
 
@@ -114,21 +138,16 @@ public class NewsS extends AbstractPersistable<Long> {
 		this.infoLevel = infoLevel;
 	}
 
-	public Integer getClickNum() {
+ 
+
+	public int getClickNum() {
 		return clickNum;
 	}
 
-	public void setClickNum(Integer clickNum) {
+	public void setClickNum(int clickNum) {
 		this.clickNum = clickNum;
 	}
 
-	public String getAcounts() {
-		return acounts;
-	}
-
-	public void setAcounts(String acounts) {
-		this.acounts = acounts;
-	}
 
 	public String getResource() {
 		return resource;
@@ -144,6 +163,38 @@ public class NewsS extends AbstractPersistable<Long> {
 
 	public void setStatus(Integer status) {
 		this.status = status;
+	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
+	public String getOptional1() {
+		return Optional1;
+	}
+
+	public void setOptional1(String optional1) {
+		Optional1 = optional1;
+	}
+
+	public String getOptional2() {
+		return Optional2;
+	}
+
+	public void setOptional2(String optional2) {
+		Optional2 = optional2;
+	}
+
+	public String getOptional3() {
+		return Optional3;
+	}
+
+	public void setOptional3(String optional3) {
+		Optional3 = optional3;
 	}
 
 }

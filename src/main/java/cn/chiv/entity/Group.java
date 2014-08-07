@@ -9,6 +9,7 @@ import org.springframework.data.jpa.domain.AbstractPersistable;
 
 /**
  * Entity implementation class for Entity: Group
+ * 所在组模块
  * 
  */
 @Entity

@@ -1,11 +1,25 @@
 package cn.chiv.entity;
 
+import static javax.persistence.FetchType.LAZY;
+
+import java.util.Date;
+
+import javax.persistence.Basic;
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Lob;
+import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 import org.springframework.data.jpa.domain.AbstractPersistable;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 /**
- * Entity implementation class for Entity: Charity 慈善参与，主办
+ * Entity implementation class for Entity: Charity 
+ * 慈善公益模块
+ * 参与，主办-加评论
  * 
  */
 @Entity
@@ -15,54 +29,37 @@ public class Charity extends AbstractPersistable<Long> {
 
 	/** 慈善标题 */
 	private String title;
-	/** 内容 */
-	private String content;
 	/** 慈善图片 */
-	private String img;
-
+	@Lob
+	@Basic(fetch = LAZY)
+	@JsonIgnore
+	private byte[] img;
 	/** 慈善主办 */
 	private String organizer;
-
-	/** 慈善合作方 */
-	private String partner;
-
 	/** 慈善点击数 */
-	private String clickNum;
+	private int clickNum;
+	/** 内容 */
+	@Column(nullable = false)
+	@Lob
+	private String content;
 
-	/** 项目地址 */
-	private String address;
+	/** 慈善主办logo */
+	private byte[] organizerLogo;
+	/** 慈善合作方 logo */
+	private byte[] partnerLogo;
 
+	/** 日期 */
+	@Column(nullable = false)
+	@Temporal(TemporalType.DATE)
+	private Date dates;
 
-	/**	评论	*/
-	private String comments;
-	
-	/**	-----------------------我要捐款-------------------	*/
-	/** 捐款目标		*/
-	private String aims;
-	
-	/**	已捐款金额	*/
-	private Double	moneys;
-	/** 捐款人数		*/
-	
-	/**	是否公开	*/
-	private Boolean enabled;
-	
-	/** 周期 结束时间 */
-	private String projektdauer;
-	
-	
-	/**---------------放捐款人信息----------------------------------------------*/
-	/** 姓名 */
-	private String name;
-	/** 电话 */
-	private String telePhone;
-	/** 邮箱 */
-	private String mail;
-	/** 企业名称 */
-	private String firmName;
-	
+	/** 用户信息 */
+	@ManyToOne(fetch = LAZY)
+	private User user;
+
 	/** 状态 */
 	private Integer status;
+
 	/** 备选字段 */
 	private String option1;
 
@@ -78,14 +75,6 @@ public class Charity extends AbstractPersistable<Long> {
 		this.title = title;
 	}
 
-	public String getImg() {
-		return this.img;
-	}
-
-	public void setImg(String img) {
-		this.img = img;
-	}
-
 	public String getOrganizer() {
 		return this.organizer;
 	}
@@ -94,30 +83,6 @@ public class Charity extends AbstractPersistable<Long> {
 		this.organizer = organizer;
 	}
 
-	public String getClickNum() {
-		return this.clickNum;
-	}
-
-	public void setClickNum(String clickNum) {
-		this.clickNum = clickNum;
-	}
-
-	public String getAddress() {
-		return this.address;
-	}
-
-	public void setAddress(String address) {
-		this.address = address;
-	}
-
-	public String getProjektdauer() {
-		return this.projektdauer;
-	}
-
-	public void setProjektdauer(String projektdauer) {
-		this.projektdauer = projektdauer;
-	}
- 
 	public String getOption1() {
 		return option1;
 	}
@@ -158,69 +123,52 @@ public class Charity extends AbstractPersistable<Long> {
 		this.content = content;
 	}
 
-	public String getPartner() {
-		return partner;
+	public Date getDates() {
+		return dates;
 	}
 
-	public void setPartner(String partner) {
-		this.partner = partner;
+	public void setDates(Date dates) {
+		this.dates = dates;
 	}
 
-	public String getComments() {
-		return comments;
+	public User getUser() {
+		return user;
 	}
 
-	public void setComments(String comments) {
-		this.comments = comments;
+	public void setUser(User user) {
+		this.user = user;
 	}
 
-	public String getAims() {
-		return aims;
+	public byte[] getImg() {
+		return img;
 	}
 
-	public void setAims(String aims) {
-		this.aims = aims;
+	public void setImg(byte[] img) {
+		this.img = img;
 	}
 
-
-	public Boolean getEnabled() {
-		return enabled;
+	public int getClickNum() {
+		return clickNum;
 	}
 
-	public void setEnabled(Boolean enabled) {
-		this.enabled = enabled;
+	public void setClickNum(int clickNum) {
+		this.clickNum = clickNum;
 	}
 
-	public String getName() {
-		return name;
+	public byte[] getOrganizerLogo() {
+		return organizerLogo;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setOrganizerLogo(byte[] organizerLogo) {
+		this.organizerLogo = organizerLogo;
 	}
 
-	public String getTelePhone() {
-		return telePhone;
+	public byte[] getPartnerLogo() {
+		return partnerLogo;
 	}
 
-	public void setTelePhone(String telePhone) {
-		this.telePhone = telePhone;
-	}
-
-	public String getMail() {
-		return mail;
-	}
-
-	public void setMail(String mail) {
-		this.mail = mail;
-	}
-
-	public String getFirmName() {
-		return firmName;
-	}
-
-	public void setFirmName(String firmName) {
-		this.firmName = firmName;
+	public void setPartnerLogo(byte[] partnerLogo) {
+		this.partnerLogo = partnerLogo;
 	}
 
 }

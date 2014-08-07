@@ -7,6 +7,7 @@ import org.springframework.data.jpa.domain.AbstractPersistable;
 
 /**
  * Entity implementation class for Entity: Role
+ * 角色
  * 
  */
 @Entity
