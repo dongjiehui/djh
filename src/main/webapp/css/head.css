@@ -1,0 +1,14 @@
+@CHARSET "UTF-8";
+.head-top{
+	background-color:#333;
+}
+
+.head-middle{
+	margin:10px 0px;
+}
+
+.head-bottom{
+	background-color: red;
+	height:30px;
+	line-height: 20px;
+}

@@ -1,0 +1,375 @@
+/** global reponsive css */
+/* TYPOGRAPHY */
+/* FONTS */
+/*===================================================================
+  MOBILE
+  ===================================================================*/
+@media screen and (max-width: 767px) {
+  .sectionContainer {
+    padding-top: 125px;
+  }
+
+  .sectionContainer > section {
+    padding: 20px 0;
+  }
+
+  .popUpCallBack {
+    width: 300px;
+  }
+
+  .corpInfo .hotline {
+    margin-top: 9px;
+  }
+  .corpInfo .hotline .hotlineLabel, .corpInfo .hotline .hotlineNum {
+    display: block;
+    padding-bottom: 3px;
+  }
+
+  .topMenuBar .hotline .hotlineLabel {
+    display: none;
+  }
+  .topMenuBar .hotline .hotlineNum {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .connectOptions .socialIcons {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    position: absolute;
+    right: 3px;
+  }
+
+  .heroCarousel .sliderDescription {
+    right: 0px;
+    top: 65px;
+  }
+
+  .header .brand {
+    padding: 10px 10px 10px 0;
+  }
+  .header .brand a.logo {
+    height: 48px;
+  }
+  .header.mini .brand {
+    padding: 2px 10px 2px 0;
+  }
+  .header.mini .brand a.logo {
+    height: 26px;
+  }
+  .header.mini .brand a.logo img {
+    vertical-align: top;
+  }
+  .header.mini .connectOptions {
+    vertical-align: top;
+  }
+  .header.mini .connectOptions .socialIcons {
+    position: static;
+    padding-bottom: 0px;
+    height: 16px;
+  }
+  .header.mini .connectOptions .icon.blue {
+    margin-right: 0px;
+    width: 16px;
+    height: 16px;
+    vertical-align: top;
+    background-size: 60px auto;
+  }
+  .header.mini .connectOptions .icon.blue.socialWeChat {
+    background-position: 0 -165px;
+  }
+  .header.mini .connectOptions .icon.blue.socialWeibo {
+    background-position: 0 -149px;
+  }
+  .header.mini .topMenuBar .hotline {
+    margin-top: 0px;
+  }
+  .header.mini .topMenuBar .hotline .hotlineNum {
+    font-size: 12px;
+    line-height: 16px;
+    height: 15px;
+  }
+  .header.mini .magaMenuBar {
+    height: 27px;
+  }
+
+  .lt-ie9 .header.mini .brand {
+    height: 30px;
+  }
+  .lt-ie9 .header.mini .brand a.logo {
+    margin-top: 2px;
+  }
+  .lt-ie9 .header.mini .brand a.logo img {
+    vertical-align: top;
+  }
+  .lt-ie9 .header.mini .socialIcons {
+    height: 16px;
+  }
+  .lt-ie9 .header.mini .connectOptions .icon {
+    background-image: url('../../images/iconSmall.png?1396111385');
+    width: 16px;
+    height: 16px;
+  }
+  .lt-ie9 .header.mini .connectOptions .icon.blue {
+    margin-right: 0px;
+    vertical-align: top;
+    background-size: auto;
+  }
+  .lt-ie9 .header.mini .connectOptions .icon.blue.socialWeChat {
+    background-position: -3px -2px;
+  }
+  .lt-ie9 .header.mini .connectOptions .icon.blue.socialWeibo {
+    background-position: -3px -21px;
+  }
+
+  .footer {
+    padding: 35px 0 30px;
+  }
+  .footer .subscriptionInfo {
+    margin-top: 24px;
+  }
+  .footer .brand, .footer .socialIcons {
+    text-align: left;
+    display: inline-block;
+  }
+  .footer .brand .logo {
+    float: none;
+  }
+  .footer .socialIcons {
+    padding-left: 20px;
+    margin-left: 20px;
+    border-left: 1px solid #4da6d5;
+  }
+
+  .filterArticles .metlifeDropdown {
+    min-width: 100%;
+  }
+
+  .inlineList {
+    display: none;
+    border-radius: 3px;
+    background-color: white;
+    margin-bottom: 10px;
+  }
+  .inlineList li {
+    color: #001549;
+    display: block;
+    padding: 5px 15px;
+    margin-bottom: 0;
+  }
+  .inlineList li:hover {
+    background-color: #a5a5a5;
+    border-radius: 0;
+    color: #001549;
+  }
+
+  section.promoAndEvents {
+    padding-bottom: 0px;
+  }
+
+  section.heroBanner {
+    position: relative;
+    padding: 0px;
+  }
+  section.heroBanner .bannerDesc {
+    height: auto;
+    width: 188px;
+    padding: 9px;
+    margin-top: 20px;
+    z-index: 1;
+  }
+  section.heroBanner .bannerDesc .mainCTABtn {
+    padding: 0%;
+    width: 137px;
+    margin-right: 10px;
+  }
+  section.heroBanner .bannerDesc .mainCTABtn.greyShade {
+    /* float: right; */
+  }
+  section.heroBanner .ctaBtnListMobile {
+    position: absolute;
+    bottom: 10px;
+  }
+  section.heroBanner .ctaBtnListMobile .ctaBtnList .mainCTABtn {
+    margin-right: 20px;
+    min-width: 124px;
+  }
+  section.heroBanner .ctaBtnListMobile .ctaBtnList .mainCTABtn span.icon {
+    margin-right: -4px;
+  }
+
+  /* mobile menu */
+  #mobileMenu {
+    display: block;
+    display: inline-block;
+    line-height: 30px;
+    position: relative;
+    vertical-align: top;
+  }
+
+  .mobileMenuDropDown {
+    background-color: white;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    position: absolute;
+    right: 0;
+    display: none;
+    z-index: 62000;
+    min-width: 260px;
+  }
+  .mobileMenuDropDown #globalSearch input {
+    width: 250px;
+  }
+
+  .windowMask {
+    position: fixed;
+    opacity: .2;
+    z-index: 2;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+  }
+
+  .android .windowMask {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+/*=============================================================================
+  BIG SCREEN MOBILES ONLY
+  =============================================================================*/
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  section.heroBanner {
+    height: 410px;
+    padding-top: 0;
+  }
+  section.heroBanner .bannerDesc {
+    width: 300px;
+  }
+}
+/*=============================================================================
+  SMALL SCREEN MOBILES ONLY
+  ============================================================================*/
+@media screen and (max-width: 480px) {
+  section.heroBanner {
+    min-height: 360px;
+  }
+}
+/*=============================================================================
+	TABLET
+  =============================================================================*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .sectionContainer > section {
+    padding: 36px 0;
+  }
+
+  .heroBanner .carousel-tabs {
+    left: auto;
+    margin-left: 0;
+  }
+  .heroBanner .carousel-tabs li {
+    width: 20%;
+  }
+
+  #globalSearch {
+    width: 50px;
+  }
+  #globalSearch input[type="search"] {
+    width: 38px;
+    padding-left: 0px;
+  }
+  #globalSearch input[type="search"]:focus {
+    padding-left: 10px;
+  }
+
+  .addFixedPosition {
+    position: fixed;
+    z-index: 6000;
+  }
+
+  .header.mini .connectOptions {
+    display: block;
+    padding-left: 0;
+  }
+  .header.mini .siteContext nav.hLinks {
+    margin-top: 18px;
+  }
+  .header.mini .corpInfo nav.hLinks {
+    vertical-align: top;
+    margin-top: 6px;
+  }
+  .header.mini .topMenuBar .hotline {
+    margin-top: 2px;
+  }
+  .header.mini .topMenuBar .hotline .hotlineNum {
+    font-size: 20px;
+  }
+
+  .flyOutItem .bulletLists {
+    margin-bottom: 36px;
+  }
+
+  .footer {
+    padding: 30px 0;
+  }
+
+  .megaMenuHeaders li {
+    padding-right: 10px;
+  }
+  .megaMenuHeaders li a {
+    padding-left: 5px;
+  }
+
+  .heroCarousel .sliderDescription {
+    right: 11%;
+    top: 90px;
+  }
+  .heroCarousel .sliderDescription h2 {
+    font-size: 36px;
+  }
+  .heroCarousel .sliderDescription p {
+    font-size: 18px;
+  }
+  .heroCarousel .sliderDescription .btn {
+    font-size: 13px;
+    padding: 2px 25px 0px 25px;
+  }
+
+  section.legalInformation {
+    padding: 40px 0px 20px 0px;
+  }
+  section.legalInformation ul li {
+    padding-left: 4%;
+  }
+
+  section.promoAndEvents {
+    padding-bottom: 16px;
+  }
+
+  .descBox {
+    padding: 10px 2%;
+  }
+
+  section.heroBanner {
+    padding-top: 0;
+  }
+  section.heroBanner .bannerDesc {
+    width: 360px;
+  }
+}
+/*===========================================================================
+	DESKTOP
+  ===========================================================================*/
+@media screen and (min-width: 1025px) {
+  section.legalInformation {
+    padding: 55px 0px 40px 0px;
+  }
+  section.legalInformation ul li {
+    padding-left: 2.5%;
+  }
+
+  .descBox {
+    padding: 10px 2%;
+  }
+}
