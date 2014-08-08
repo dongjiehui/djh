@@ -1,0 +1,162 @@
+@charset "utf-8";
+
+body{
+	margin: 0 ;
+	padding: 0 ;
+	font-family: 微软雅黑;
+	font-size: 12px ;
+}
+
+.container{
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 1080px;
+	overflow: hidden;
+}
+
+.wrapper{
+	width: 700px;
+	float: left;
+}
+
+.newTopic{
+	padding: 15px;
+	padding-right: 0 ;
+	padding-bottom: 0 ;
+	width: 365px;
+	float: left;
+}
+
+.newTopic p{
+	font-size: 22px;
+} 
+
+.newTopic ul li{
+	padding-top:8px; 
+}
+
+.newTopic ul li p{
+	margin-bottom: 3px;
+	font-size: 16px;
+	color: #4f4e4e;
+	overflow: hidden;
+}
+
+#browseNum_span{
+	float: left;
+	font-size: 12px;
+}
+
+#publishTime_span{
+	float: right;
+	font-size: 12px;
+}
+
+.content{
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	width: 1080px;
+	overflow: hidden;
+}
+
+.con_left{
+	width: 700px;
+	float: left;
+}
+
+.con_left ul{
+	overflow: hidden;
+}  
+
+#con_left_p{
+	padding-bottom: 4px;
+	font-size: 22px;
+	border-bottom: solid 1px #000;
+}
+
+#con_left_p_title{
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 20px;
+	color: #000; 
+}
+
+#con_left_p_dateAndFrom{ 
+	padding-bottom: 5px;
+	font-size: 18px;
+	color: #666;
+	float: right;
+	clear: both;
+}
+
+#con_left_p_words{
+	float: left;
+	font-size: 18px;
+	color: #666; 
+}
+
+.con_left ul li{
+	padding-top: 15px;
+	padding-bottom: 10px;
+	overflow: hidden;
+}
+
+.con_left_leftDiv{
+	margin-right:10px;
+	width: 570px;
+	float: left;
+}
+
+.con_left_rightDiv{
+	width: 120px;
+	float: left;
+}
+.con_right{
+	padding-left: 15px;
+	width: 365px;
+	float: left;
+	overflow: hidden;
+}
+
+.con_right_firDIV{
+	width: 380px;
+	overflow: hidden;
+}
+
+.con_right_secondDIV{
+	width: 380px;
+	overflow: hidden;
+}
+
+#con_right_p{
+	padding-bottom: 20px;
+	font-size: 22px; 
+}
+ 
+.con_right_secondDIV ul li{
+	padding-top:8px; 
+}
+
+.con_right_secondDIV ul li p{
+	margin-bottom: 3px;
+	font-size: 16px;
+	color: #4f4e4e;
+	overflow: hidden;
+}
+
+#con_right_p2{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 22px; 
+}
+
+#b_date{
+	padding-right: 15px;
+}
+
+.bottom{
+	background-color: #7c7a7a;
+}
