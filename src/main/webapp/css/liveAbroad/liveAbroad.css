@@ -34,3 +34,7 @@
 .imageDiv{
 	margin:20px 0px;
 }
+
+.minWidth{
+	min-width:1080px;
+}
