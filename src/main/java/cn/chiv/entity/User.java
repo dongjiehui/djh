@@ -31,6 +31,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 public class User extends AbstractPersistable<Long> {
 
 	private static final long serialVersionUID = 5374970514016239427L;
+	
 	/** 姓名 */
 	@Column(name = "UName", nullable = false)
 	private String username;
