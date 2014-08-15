@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>发布信息</title>
+		
+		<link rel="stylesheet" href="../../css/bootstrap.css" type="text/css">
+		<link rel="stylesheet" href="../../responsive.css" type="text/css">
+		<link rel="stylesheet" href="../../css/publish/publishCommon.css" type="text/css">		
+		
+		<script type="text/javascript" src="../../js/jquery-1.8.2.js"></script>
+		<script type="text/javascript" src="../../js/bootstrap.js"></script>
+	</head>
+	<body>
+		<div class="container-fluid minWidth" >
+			<iframe src="../head.html" frameborder="0" width="100%" style="min-height: 200px;"></iframe>
+		</div>
+	
+		<div class="container-fluid" style="width:1080px;margin-left:auto;margin-right:auto;">
+			<div class="row-fluid"  style="margin-top: 20px;">
+		 		<div class=""></div>
+		    	<div style="width:1080px;margin-left:auto;margin-right:auto" class="">
+		    		<h4 style="border-bottom:2px solid #F67272">
+		    			<table id="menuTable" style="width:100%">
+		    				<tr>  
+		    					<td width="20%" class="menuTable" id="membersMessageId"  onclick="membersMessage();">发布会员寄语</td>
+		    					<td width="20%" class="menuTable" id="liveAbroadId" style="background:#ED3E2C;color:#fff;"  onclick="liveAbroad();">发布国外生活</td>
+		    					<td width="20%" class="menuTable" id="homeStyleId" onclick="homeStyle();">发布故乡风情</td>
+		    					<td width="20%" class="menuTable" id="charityActivityId" onclick="charityActivity();">慈善公益活动</td>
+		    					<td width="20%" class="menuTable" id="charityOrganizeId" onclick="charityOrganize();">慈善公益机构</td>
+		    				</tr>
+		    			</table>
+		    		</h4>
+		    	</div>   	
+		    </div>
+		    
+		<div class="row-fluid" style="font-size:125%;">
+	 		<div class=""></div>   
+	    	<div style="width:1080px;margin-left:auto;margin-right:auto" class="">
+	    	
+<!-- 这是发布会员寄语的DIV__标签开始---------------------------------------------------------------------------------------->    	
+		    		<div id="membersMessage" style="border:1px solid #eee;margin:0 0 10px 0;overflow:hidden;display:none">
+		    			<div style="padding:0px;">
+		    				<div style="width:80%;margin:0 5%;padding:2% 5% 2% 5%">
+		    					<iframe src="../../html/publish/membersMessagePub.html" frameborder="0" width="100%" style="min-height: 600px;"></iframe>
+			    			</div>
+			   		  	</div>
+			   		</div>
+<!-- 这是发布会员寄语的DIV__标签结束---------------------------------------------------------------------------------------->    		
+		    		
+<!-- 这是发布国外生活的DIV__标签开始---------------------------------------------------------------------------------------->    		
+		    		<div id="liveAbroad" style="border:1px solid #eee;margin:0 0 10px 0;overflow:hidden;">
+		    			<div style="padding:0px;">
+		    				<div style="width:80%;margin:0 5%;padding:2% 5% 2% 5%">
+		    					<iframe src="../../html/publish/liveAbroadPub.html" frameborder="0" width="100%" style="min-height: 600px;"></iframe>
+		    				</div>
+		    			</div>
+		    		</div>
+<!-- 这是发布国外生活的DIV__标签结束------------------------------------------------------------------------------------------>    	
+		    	
+		    	
+		    	
+<!-- 这是发布故乡风情的DIV__标签开始---------------------------------------------------------------------------------------->    		
+		    		<div id="homeStyle" style="border:1px solid #eee;margin:0 0 10px 0;overflow:hidden;display:none">
+		    			<div style="padding:0px;">
+		    				<div style="width:80%;margin:0 5%;padding:2% 5% 2% 0%">
+								<iframe src="../../html/publish/homeStyle.jsp" frameborder="0" width="100%" style="min-height: 200px;"></iframe>
+		    				</div>
+		    			</div>
+		    		</div>
+<!-- 这是发布故乡风情的DIV__标签结束------------------------------------------------------------------------------------------>
+		
+		
+<!-- 这是慈善公益活动的DIV__标签开始---------------------------------------------------------------------------------------->    		
+		    		<div id="charityActivity" style="border:1px solid #eee;margin:0 0 10px 0;overflow:hidden;display:none">
+		    			<div style="padding:0px;"> 
+		    				<div style="width:80%;margin:0 5%;padding:2% 5% 2% 0%">
+		    					<iframe src="../../html/publish/charityActivity.jsp" frameborder="0" width="100%" style="min-height: 200px;"></iframe>
+		    				</div>
+		    			</div>
+		    		</div>
+<!-- 这是慈善公益活动的DIV__标签结束------------------------------------------------------------------------------------------>
+	
+	
+<!-- 这是慈善公益机构的DIV__标签开始---------------------------------------------------------------------------------------->    		
+		    		<div id="charityOrganize" style="border:1px solid #eee;margin:0 0 10px 0;overflow:hidden;display:none">
+		    			<div style="padding:0px;"> 
+		    				<div style="width:80%;margin:0 5%;padding:2% 5% 2% 0%">
+		    					<iframe src="../../html/publish/charityOrganize.jsp" frameborder="0" width="100%" style="min-height: 200px;"></iframe>
+		    				</div>
+		    			</div>
+		    		</div>
+<!-- 这是慈善公益机构的DIV__标签结束------------------------------------------------------------------------------------------>
+	     	
+		    	</div>
+		    </div>
+		</div>
+	</body>
+</html>
