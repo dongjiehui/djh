@@ -42,7 +42,7 @@ public class LiveAbroad extends AbstractPersistable<Long> {
 	/** 日期 */
 	@Column(nullable = false)
 	@Temporal(TemporalType.DATE)
-	private Date publishDate;
+	private Date publishDate = new Date();
 
 	/** 点击数 */
 	private int clickNum;

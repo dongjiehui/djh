@@ -6,6 +6,7 @@ import org.springframework.data.repository.query.Param;
 import cn.chiv.entity.User;
 import cn.chiv.repository.MyRepository;
 
+
 public interface UserRepository extends MyRepository<User, Long> {
 
 	@Query("from User where username = :username and password = :password")

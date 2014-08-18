@@ -5,9 +5,8 @@
 <%@ page import="org.apache.commons.fileupload.*"%>
 <%@ page import="org.apache.commons.fileupload.disk.*"%>
 <%@ page import="org.apache.commons.fileupload.servlet.*"%>
-<%@ page import="com.opensymphony.xwork2.ActionContext"%>
-<%@ page
-        import="org.apache.struts2.dispatcher.multipart.MultiPartRequestWrapper"%>
+<%@ page import="org.springframework.http.HttpRequest"%>
+<%@ page import="org.apache.struts2.dispatcher.multipart.MultiPartRequestWrapper"%>
 <%@ page import="org.json.simple.*"%>
 <%
         //文件保存目录路径    img_upload是服务器存储上传图片的目录名

@@ -121,7 +121,7 @@ public class User extends AbstractPersistable<Long> {
 
 	/** 好友数 */
 	@Column(name = "UFriendsNum")
-	private int friendsNum;
+	private Integer friendsNum;
 
 	/** 个人资料公开 */
 	@Column(name = "UProfilePublish")
@@ -152,6 +152,14 @@ public class User extends AbstractPersistable<Long> {
 	@ManyToMany
 	@JoinTable(name = "sec_user_role", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
 	private Set<Role> roles = new HashSet<>();
+	
+	public User() {
+		
+	}
+	
+	public User(Long id) {
+		setId(id);
+	}
 
 	public String getUsername() {
 		return this.username;
@@ -345,11 +353,11 @@ public class User extends AbstractPersistable<Long> {
 		this.recommend = recommend;
 	}
 
-	public int getFriendsNum() {
+	public Integer getFriendsNum() {
 		return friendsNum;
 	}
 
-	public void setFriendsNum(int friendsNum) {
+	public void setFriendsNum(Integer friendsNum) {
 		this.friendsNum = friendsNum;
 	}
 
