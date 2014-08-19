@@ -27,118 +27,108 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
  * 
  */
 @Entity
-@Table(name = "sec_user")
-public class User extends AbstractPersistable<Long> {
+@Table(name = "d_user")
+public class User extends AbstractPersistable2<Long> {
 
 	private static final long serialVersionUID = 5374970514016239427L;
-	
 	/** 姓名 */
-	@Column(name = "UName", nullable = false)
+	@Column(name = "U_Name", nullable = false)
 	private String username;
+	/** 等级 */
+	@Column(name = "U_Intergral")
+	private String intergral;
+	/** 用户类别 */
+	@Column(name = "U_Grade")
+	private String grades;
+	
+	/** 性别 */
+	@Column(name = "U_Sex")
+	private String sex;
+	/** 手机号 */
+	@Column(name = "U_Phone_Num", nullable = false)
+	private String phoneNum;
 	/** 密码 */
-	@Column(name = "UPassword", nullable = false)
+	@Column(name = "U_Password", nullable = false)
 	@JsonIgnore
 	private String password;
 
 	/** 邮箱 */
-	@Column(name = "UEmail")
+	@Column(name = "U_Email")
 	private String email;
+	/** 所在地址 */
+	@Column(name = "U_Address")
+	private String address;
+	/** 公司 */
+	@Column(name = "U_Company")
+	private String company;
+	/** 行业 */
+	@Column(name = "U_Industry")
+	private String industry;
+	
+	/** 部门 */
+	@Column(name = "U_Demp")
+	private String demp;
+	
+	/** 职位 */
+	@Column(name = "U_Demp_Post")
+	private String dempPost;
+	
+	/** 公司地址 */
+	@Column(name = "U_Company_Area")
+	private String companyArea;
 
-	/** 年龄 */
-	private int age;
 
-	/** 生日 */
-	@Temporal(TemporalType.DATE)
-	private Date birthday;
+	/** 电话（固号） */
+	@Column(name = "U_Fixed_Phone")
+	private String teltPhone;
 
+	/** 推荐人 */
+	@Column(name = "U_Recommend")
+	private String recommend;
+	/** 好友数 */
+	@Column(name = "U_Friends_Num")
+	private Integer friendsNum;
+	
+	/** 个人资料公开 */
+	@Column(name = "U_Profile_Publish")
+	private String profilePublish;
+	
+	/** 个人资料描述 */
+	@Column(name = "U_Personal_Information")
+	private String personalInformation;
+	/** 公司所在市 */
+	@Column(name = "U_Company_City")
+	private String companyCity;
+
+	/** 删除标志位 正常用户是1，删除是2 */
+	@Column(name = "U_Status")
+	private String status;
+	/** 头像路径 */
+	@Column(name = "U_Img")
+	@Basic(fetch = LAZY)
+	@JsonIgnore
+	private String imges;
+	
 	/** 图片 */
 	@Lob
 	@Basic(fetch = LAZY)
 	@JsonIgnore
 	private byte[] imgs;
 
-	/** 头像路径 */
-	@Column(name = "UImg")
-	@Basic(fetch = LAZY)
-	@JsonIgnore
-	private String imges;
-
-	/** 等级 */
-	@Column(name = "UIntergral")
-	private String intergral;
-
-	/** 用户类别 */
-	@Column(name = "UGrade")
-	private String grades;
-
-	/** 性别 */
-	@Column(name = "USex")
-	private String sex;
-
-	/** 删除标志位 正常用户是1，删除是2 */
-	@Column(name = "UStatus")
-	private String status;
-
-	/** 手机号 */
-	@Column(name = "UPhoneNum", nullable = false)
-	private String phoneNum;
-
-	/** 所在地址 */
-	@Column(name = "UAddress")
-	private String address;
-
-	/** 公司 */
-	@Column(name = "UCompany")
-	private String company;
-
-	/** 行业 */
-	@Column(name = "UIndustry")
-	private String industry;
-
-	/** 部门 */
-	@Column(name = "UDemp")
-	private String demp;
-
-	/** 职位 */
-	@Column(name = "UDempPost")
-	private String dempPost;
-
-	/** 公司地址 */
-	@Column(name = "UCompanyArea")
-	private String companyArea;
-
-	/** 公司所在市 */
-	@Column(name = "UCompanyCity")
-	private String companyCity;
-
-	/** 电话（固号） */
-	@Column(name = "UFixedPhone")
-	private String teltPhone;
-
-	/** 推荐人 */
-	@Column(name = "URecommend")
-	private String recommend;
-
-	/** 好友数 */
-	@Column(name = "UFriendsNum")
-	private Integer friendsNum;
-
-	/** 个人资料公开 */
-	@Column(name = "UProfilePublish")
-	private String profilePublish;
-
-	/** 个人资料描述 */
-	@Column(name = "UPersonalInformation")
-	private String personalInformation;
-
-	/**		*/
-	private boolean enabled;
-
 	/** 注册的时间 */
 	@Column(nullable = false)
 	@Temporal(TemporalType.DATE)
 	private Date dates;
 
+	/** 年龄 */
+	private int age;
+	
+	/** 生日 */
+	@Temporal(TemporalType.DATE)
+	private Date birthday;
+	/**		*/
+	private boolean enabled;
+	
 	/** 备选字段 */
 	private String Optional1;
 	private String Optional2;
@@ -158,7 +148,7 @@ public class User extends AbstractPersistable<Long> {
 	}
 	
 	public User(Long id) {
-		setId(id);
+		setU_id(id);
 	}
 
 	public String getUsername() {
@@ -407,6 +397,18 @@ public class User extends AbstractPersistable<Long> {
 
 	public void setOptional3(String optional3) {
 		Optional3 = optional3;
+	}
+
+	@Override
+	public Long getId() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean isNew() {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 }

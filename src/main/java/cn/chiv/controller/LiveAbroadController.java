@@ -31,14 +31,14 @@ public class LiveAbroadController extends AbstractBaseController<LiveAbroad, Lon
 	
 	/**	表单提交 文字+图片 发布国外生活	*/
 	@RequestMapping(value = "addLiveAbroad", method = RequestMethod.POST, consumes = "multipart/form-data")
-	public void addLiveAbroad(@RequestParam String title, @RequestParam MultipartFile imgs) {
+	public void addLiveAbroad(@RequestParam String title, @RequestParam String contents, @RequestParam MultipartFile imgs) {
 		
 		try {
 			LiveAbroad liveAbroad = new LiveAbroad();		
 			liveAbroad.setTitle(title);
 			liveAbroad.setImgs(imgs.getBytes());
-			
-			User user = new User(1L);
+			liveAbroad.setContents(contents);
+			User user = new User(2L);
 			liveAbroad.setUser(user);
 			
 			abroadRepository.save(liveAbroad);
