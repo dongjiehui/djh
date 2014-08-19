@@ -2,8 +2,13 @@ package cn.chiv.controller;
 
 import java.io.IOException;
 import java.io.OutputStream;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -36,8 +41,11 @@ public class LiveAbroadController extends AbstractBaseController<LiveAbroad, Lon
 		try {
 			LiveAbroad liveAbroad = new LiveAbroad();		
 			liveAbroad.setTitle(title);
+			liveAbroad.setClickNum(0);
+			
 			liveAbroad.setImgs(imgs.getBytes());
 			liveAbroad.setContents(contents);
+			System.out.println("---contents-------"+contents);
 			User user = new User(2L);
 			liveAbroad.setUser(user);
 			
@@ -61,9 +69,6 @@ public class LiveAbroadController extends AbstractBaseController<LiveAbroad, Lon
 		}
 		
 	}
-	
-	
 
-	
 	
 }
