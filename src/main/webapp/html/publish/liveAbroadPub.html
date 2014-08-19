@@ -34,12 +34,12 @@
 					K.ctrl(document, 13, function() {
 						self.sync();
 						//document.forms['form1'].submit();
-						K('form[name=publishNew]')[0].submit();
+						K('form[name=liveAbroadForm]')[0].submit();
 					});
 					K.ctrl(self.edit.doc, 13, function() {
 						self.sync();
 						//document.forms['form1'].submit();
-						K('form[name=publishNew]')[0].submit();
+						K('form[name=liveAbroadForm]')[0].submit();
 					});
 				}
 <!--				,afterBlur: function(){this.sync();}-->
@@ -77,13 +77,13 @@
                     alert("提交失败！");
                 }
             }); */
-            
+            	
         	 document.getElementById("liveAbroadForm").submit();
         }
 		</script>
 	</head>
 	<body>
-		<form id="liveAbroadForm" method="post" action="http://localhost:8080/liveAbroad/addLiveAbroad" enctype="multipart/form-data">
+		<form id="liveAbroadForm" name="liveAbroadForm" method="post" action="http://localhost:8080/liveAbroad/addLiveAbroad" enctype="multipart/form-data">
 			<div class="container-fluid"  style="margin-left:auto;margin-right:auto;">
 				<div class="divMargin">
 					<span class="col-xs-3 ">国外生活标题：</span>
@@ -105,8 +105,12 @@
 						<textarea name="contents" cols="100" rows="18" id="editor" style="width:100%;height:450px;"></textarea>
 					</span>
 				</div>
+				
+				<div class="divMargin" style="text-align: center;">
+					<input	name="pubLiveAbroad" value="发布国外生活" type="button" onclick="pub();"/>
+				</div>
 			</div>
 		</form>
-		<input	name="pubLiveAbroad" value="发布国外生活" type="button" onclick="pub();"/>
+	
 	</body>
 </html>
