@@ -1,36 +1,9 @@
 @CHARSET "UTF-8";
 
-.viewsFont{
-	font-size:10px;
-	overflow: hidden;
-}
-
-.publishDate{
-	text-align: right;
-}
-
-.lifeTitle{
-	float: none;
-	font-size: 16px;
-}
-
-#lifeState ul li{
-	margin: 10px 0px;
-}
-
-#lifeState h2{
-	margin-top:0px;
-	font-weight: bold;
-}
-
-.imageDiv h3{
-	font-weight: bold;
-}
-
-.imageDivTitle{
-	border-bottom: 1px solid #000;
-}
-
-.imageDiv{
-	margin:20px 0px;
-}
+ul, li {list-style: none;}
+.selected{color:red;}
+#qlintroLeft{padding:0px;}
+#qlintroLeft ul{padding:0px;}
+#qlintroLeft ul li{border-bottom: 1px solid #999;padding:0px;text-align: center;cursor: pointer;}
+#qlintroRight{background-color: #fff;padding-bottom: 50px;}
+#qlintroRight div h4{border-bottom:1px solid #999;font-weight: bold;}

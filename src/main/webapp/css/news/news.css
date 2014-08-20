@@ -19,3 +19,18 @@ a{ text-decoration: none; }
 .li_p_date{ color:#333; font-size: 14px;}
 #new_news_leftSpan{}
 #new_news_rightSpan{margin-left:50px;}
+
+#content_medium{margin-top:20px;overflow: hidden;}
+#today_news{width:350px;float:left;padding-right: 30px;}
+#today_news ul li{ margin-top: 10px;padding-bottom:5px ; border-bottom: solid 1px #ccc; }
+#today_news ul li p{ padding: 3px 0 3px 0 ; font-family:微软雅黑; } 
+#Abroad_news{width:700px;float:left;}
+.abroadNewsImg{width:30%;float:left;height:140px}
+.abroadNewsImg img{width:100%;}
+.abroadNewsText{width:65%;float:left;margin-left:5%;}
+#Abroad_news ul li{ margin-top: 10px;padding-bottom:5px ;overflow: hidden;}
+#Abroad_news ul li p{ padding: 3px 0 3px 0 ; font-family:微软雅黑; } 
+
+#content_bottom{margin-top:20px;overflow: hidden;}
+.imageDiv{margin:20px 0px;}
+.imageDiv .col-xs-3{width:25%;float:left;}
