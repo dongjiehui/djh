@@ -9,6 +9,8 @@ import java.util.Set;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.Lob;
@@ -17,6 +19,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 
 import org.springframework.data.jpa.domain.AbstractPersistable;
 
@@ -44,6 +47,18 @@ public class User extends AbstractPersistable2<Long> {
 	/** 性别 */
 	@Column(name = "U_Sex")
 	private String sex;
+	
+	@Transient//不持久化
+	@Enumerated(EnumType.STRING)
+	@Column(length=5, nullable=false)
+	private Gender gender = Gender.MAN;
+	public Gender getGender() {
+		return gender;
+	}
+	public void setGender(Gender gender) {
+		this.gender = gender;
+	}
+
 	/** 手机号 */
 	@Column(name = "U_Phone_Num", nullable = false)
 	private String phoneNum;

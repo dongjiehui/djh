@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="UTF-8">
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 		<title>Insert title here</title>
 		
 		<link rel="stylesheet" href="../../css/bootstrap.css" type="text/css">
@@ -63,7 +63,7 @@
         
         
         function pub(){
-        	alert("提交表单！");
+     /*    	alert("提交表单！"); */
         	//alert($('#liveAbroadForm').serialize());
         	/* $.ajax({
                 type: "POST",
@@ -82,6 +82,15 @@
 //          editor.sync();
         	document.getElementById("liveAbroadForm").submit();
         }
+        
+        /* window.onload = function(){
+        	
+        	alert("=======--");
+        	if($("body").text()=="success"){
+        		alert($("body").text());
+        	}
+        	
+        } */
 		</script>
 	</head>
 	<body>

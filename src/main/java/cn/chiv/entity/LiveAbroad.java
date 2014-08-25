@@ -31,8 +31,8 @@ public class LiveAbroad extends AbstractPersistable<Long> {
 
 	/** 图片 */
 	@Lob
-	@Basic(fetch = LAZY)
-	@JsonIgnore
+//	@Basic(fetch = LAZY)
+//	@JsonIgnore
 	private byte[] imgs;
 
 	/** 内容 */
