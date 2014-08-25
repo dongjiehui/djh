@@ -35,6 +35,11 @@
 	margin:20px 0px;
 }
 
+.imageDiv div h3{
+	text-align: center;
+	font-weight: bold;
+}
+
 .minWidth{
 	min-width:1080px;
 }
