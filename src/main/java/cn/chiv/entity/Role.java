@@ -3,6 +3,7 @@ package cn.chiv.entity;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
+import org.hibernate.envers.Audited;
 import org.springframework.data.jpa.domain.AbstractPersistable;
 
 /**
@@ -12,6 +13,7 @@ import org.springframework.data.jpa.domain.AbstractPersistable;
  */
 @Entity
 @Table(name = "sec_role")
+@Audited
 public class Role extends AbstractPersistable<Long> {
 
 	private static final long serialVersionUID = 848557594123152934L;

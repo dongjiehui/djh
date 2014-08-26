@@ -5,6 +5,7 @@ import javax.persistence.FetchType;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import org.hibernate.envers.Audited;
 import org.springframework.data.jpa.domain.AbstractPersistable;
 
 /**
@@ -14,6 +15,7 @@ import org.springframework.data.jpa.domain.AbstractPersistable;
  */
 @Entity
 @Table(name = "sec_group")
+@Audited
 public class Group extends AbstractPersistable<Long> {
 
 	private static final long serialVersionUID = 7088119885136369695L;

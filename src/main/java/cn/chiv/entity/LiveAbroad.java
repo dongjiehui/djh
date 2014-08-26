@@ -12,6 +12,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import org.hibernate.envers.Audited;
 import org.springframework.data.jpa.domain.AbstractPersistable;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -22,6 +23,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
  * 
  */
 @Entity
+@Audited
 public class LiveAbroad extends AbstractPersistable<Long> {
 
 	private static final long serialVersionUID = 1L;
@@ -31,8 +33,8 @@ public class LiveAbroad extends AbstractPersistable<Long> {
 
 	/** 图片 */
 	@Lob
-//	@Basic(fetch = LAZY)
-//	@JsonIgnore
+	@Basic(fetch = LAZY)
+	@JsonIgnore
 	private byte[] imgs;
 
 	/** 内容 */
