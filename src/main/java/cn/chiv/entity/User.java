@@ -69,7 +69,6 @@ public class User extends AbstractPersistable2<Long> {
 	@JsonIgnore
 	private String password;
 
-	
 	/** 邮箱 */
 	@Column(name = "U_Email")
 	private String email;
