@@ -34,6 +34,7 @@ public final class Application {
 	public Filter characterEncodingFilter() {
 		CharacterEncodingFilter filter = new CharacterEncodingFilter();
 		filter.setEncoding("UTF-8");
+		
 		filter.setForceEncoding(false);
 		return filter;
 	}
