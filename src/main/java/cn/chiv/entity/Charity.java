@@ -51,7 +51,7 @@ public class Charity extends AbstractPersistable<Long> {
 	/** 日期 */
 	@Column(nullable = false)
 	@Temporal(TemporalType.DATE)
-	private Date dates;
+	private Date dates = new Date();
 
 	/** 用户信息 */
 	@ManyToOne(fetch = LAZY)

@@ -41,7 +41,7 @@ public class CharityIntroduction extends AbstractPersistable<Long> {
 	/** 法人 */
 	private String legalPerson;
 	/** 成立时间 */
-	private Date establishTime;
+	private Date establishTime = new Date();
 
 	/** 业务范围 */
 	private String operationScope;

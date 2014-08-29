@@ -135,7 +135,7 @@ public class User extends AbstractPersistable2<Long> {
 	/** 注册的时间 */
 	@Column(nullable = false)
 	@Temporal(TemporalType.DATE)
-	private Date dates;
+	private Date dates = new Date();
 
 	/** 年龄 */
 	private int age;

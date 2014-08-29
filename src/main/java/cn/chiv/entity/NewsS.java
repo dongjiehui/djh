@@ -32,7 +32,7 @@ public class NewsS extends AbstractPersistable<Long> {
 	
 	/** 发布时间 */
 	@Temporal(TemporalType.DATE)
-	private Date times;
+	private Date times = new Date();
 	
 	/** 内容 */
 	@Lob

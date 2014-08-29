@@ -44,7 +44,7 @@ public class MemberMessages extends AbstractPersistable<Long> {
 	/** 日期 */
 	@Column(nullable = false)
 	@Temporal(TemporalType.DATE)
-	private Date dates;
+	private Date dates = new Date();
 	
 	/** 内容 */
 	@Column(nullable = false)

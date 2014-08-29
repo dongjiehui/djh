@@ -28,7 +28,7 @@ public class Comments extends AbstractPersistable<Long> {
 	/** 时间			*/
 	@Column(nullable = false)
 	@Temporal(TemporalType.DATE)
-	private Date comTimes;
+	private Date comTimes = new Date();
 	
 	/** 信息内容		*/
 	@Column(nullable = false)
