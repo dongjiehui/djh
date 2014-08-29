@@ -3,6 +3,8 @@ package cn.chiv.controller;
 import java.io.IOException;
 import java.io.OutputStream;
 
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -31,7 +33,7 @@ public class CharityIntroductionController extends AbstractBaseController<Charit
 	
 	/**	表单提交 文字+图片 发布国外生活	*/
 	@RequestMapping(value = "addCharityIntroduct", method = RequestMethod.POST, consumes = "multipart/form-data")
-	public void addLiveAbroad(@RequestParam String title, @RequestParam String contents, @RequestParam MultipartFile imgs) {
+	public void addLiveAbroad(@RequestParam String title, @RequestParam String contents, @RequestParam MultipartFile imgs,HttpServletResponse response) {
 		
 		try {
 			Charity charityIntroduct = new Charity();		
@@ -49,7 +51,14 @@ public class CharityIntroductionController extends AbstractBaseController<Charit
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+		try {
+			response.getWriter().write("<script type='text/javascript'>"
+					+ " top.location.href='http://localhost:8080/html/publish/publishCommon.html'"
+					+ "</script>");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	/**	获取图片	*/
