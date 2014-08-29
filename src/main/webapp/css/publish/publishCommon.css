@@ -24,3 +24,8 @@
 .image{
 	text-align: right;
 }
+
+.selected{
+	background:#ED3E2C;
+	color:#fff;
+}
